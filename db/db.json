@@ -1,7 +1,6 @@
 {
   "projetos": [
     {
-      "id": 1,
       "titulo": "Reflorestamento Local",
       "descricao": "Plantar árvores nativas para recuperar áreas degradadas e aumentar a biodiversidade da região.",
       "imagem": "https://www.branco.com.br/content/dam/Branco/Latin%20America/Portuguese-BR/Images/newsroom/Reflorestramento%20-%2003.jpg",
@@ -24,31 +23,39 @@
           "titulo": "Vista aérea de área reflorestada",
           "url": "https://agenciapara.com.br/midias/2024/grandes/20103_a2a9dcc1-0027-379a-86d7-16a686ee90ff.jpg"
         }
-      ]
+      ],
+      "id": 1
     },
     {
-      "titulo": "Educação Ambiental Atualizada",
-      "descricao": "Oficinas, palestras e eventos comunitários para fortalecer a conscientização ambiental.",
+      "titulo": "Educação Ambiental",
+      "descricao": "Oficinas e palestras em escolas para promover hábitos sustentáveis entre crianças e jovens.",
       "imagem": "https://www.infoescola.com/wp-content/uploads/2019/09/educacao-ambiental-639310237.jpg",
-      "conteudo": "O projeto busca engajar comunidades por meio de atividades participativas.",
-      "objetivos": "Promover hábitos sustentáveis, reduzir desperdício e estimular o consumo consciente.",
-      "resultados": "Mais de 800 alunos impactados e 30 escolas atendidas.",
+      "conteudo": "O projeto busca formar cidadãos conscientes por meio de palestras, oficinas e campanhas educativas em escolas públicas.",
+      "objetivos": "Promover hábitos sustentáveis e conscientização ambiental.",
+      "resultados": "Mais de 500 alunos impactados e 20 escolas atendidas.",
       "local": "Belo Horizonte - MG",
-      "parceiros": "Secretaria de Educação, ONGs ambientais, empresas locais",
-      "datas": "Início: 01/02/2025 | Término: 31/12/2025",
+      "parceiros": "Secretaria de Educação, ONGs ambientais",
+      "datas": "Início: 01/02/2025 | Término: 31/10/2025",
       "fotos": [
         {
-          "titulo": "Oficina de reciclagem com alunos",
-          "url": "https://img.freepik.com/fotos-premium/oficina-de-reciclagem-escolar.jpg"
+          "titulo": "Palestra sobre sustentabilidade em escola pública",
+          "url": "https://conexaoeduca.saosebastiao.sp.gov.br/wp-content/uploads/2022/06/d9c240f3-1310-4243-ac76-01fbe7dbc98a-1024x682.jpg"
+        },
+        {
+          "titulo": "Distribuição de material de conscientização ambiental",
+          "url": "https://lucasdorioverde.mt.gov.br/arquivos/noticias/11435/g/pref_lrv.jpg"
+        },
+        {
+          "titulo": "Oficina de reciclagem para crianças",
+          "url": "https://www.santos.sp.gov.br/static/files_www/styles/newspagesimples/public/field/image/whatsapp_image_2019-07-05_at_17.31.40.jpeg?itok=SR-l0e9y"
         }
       ],
       "id": 2
     },
     {
-      "id": 3,
       "titulo": "Proteção da Fauna Silvestre",
       "descricao": "Monitoramento e proteção de espécies nativas ameaçadas, com ações para preservar seus habitats naturais.",
-      "imagem": "https://correiopiauiense.com.br/media/image_bank/2025/3/thumbs/programa-de-protecao-a-fauna-silvestre-e-criado-no-piaui.jpg.1200x0_q95_crop.jpeg",
+      "imagem": "https://static.escolakids.uol.com.br/conteudo_legenda/a-arara-azul-uma-ave-familia-dos-psitacideos-5c8a3e0c53ef2.jpg",
       "conteudo": "O projeto realiza o monitoramento de espécies em risco e ações de preservação de habitats naturais.",
       "objetivos": "Proteger espécies ameaçadas e preservar seus habitats.",
       "resultados": "Espécies monitoradas: 15 | Áreas protegidas: 10 hectares",
@@ -68,25 +75,8 @@
           "titulo": "Tamanduá-bandeira em seu habitat natural",
           "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/tamandua_002.jpg"
         }
-      ]
-    },
-    {
-      "titulo": "Gestão de Resíduos Urbanos",
-      "descricao": "Projeto voltado à redução do lixo e incentivo à coleta seletiva nos bairros da cidade.",
-      "imagem": "https://s3.amazonaws.com/mongabay-images/22/05/03061402/c1f7999f-urbana.jpg",
-      "conteudo": "Campanhas e parcerias com escolas e associações de moradores para conscientização ambiental.",
-      "objetivos": "Reduzir a produção de lixo doméstico e aumentar a taxa de reciclagem.",
-      "resultados": "Coleta seletiva implementada em 10 bairros e 200 famílias participantes.",
-      "local": "Caeté - MG",
-      "parceiros": "Prefeitura Municipal, cooperativas de reciclagem e ONGs locais",
-      "datas": "Início: 01/04/2025 | Término: 30/09/2025",
-      "fotos": [
-        {
-          "titulo": "Campanha de conscientização",
-          "url": "https://blog.reciclafacil.com.br/wp-content/uploads/2021/02/reciclagem-urbana.jpg"
-        }
       ],
-      "id": 5
+      "id": 3
     }
   ]
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos - EcoVida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body id="projetos" class="d-flex flex-column min-vh-100">
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-sm py-4 mb-4">
+    <div class="container-fluid px-md-5 d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-success fw-bold text-decoration-none">&larr; Voltar para a Home</a>
+      <h1 class="h4 text-success mb-0">Gerenciamento de Projetos</h1>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container-fluid px-md-5 mb-5 flex-grow-1">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h5 mb-0 text-success">Lista de Projetos</h2>
+      <button class="btn btn-success" id="btnAddProjeto">+ Adicionar Projeto</button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead class="table-success">
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th class="text-center">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaProjetos">
+          <!-- Preenchido dinamicamente via JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal de Projeto -->
+  <div class="modal fade" id="modalProjeto" tabindex="-1" aria-labelledby="modalProjetoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProjetoLabel">Adicionar Projeto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="formProjeto">
+            <!-- ID oculto -->
+            <input type="hidden" id="projeto-id">
+
+            <div class="mb-3">
+              <label for="projeto-titulo" class="form-label">Título</label>
+              <input type="text" class="form-control" id="projeto-titulo" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-descricao" class="form-label">Descrição</label>
+              <textarea class="form-control" id="projeto-descricao" rows="2" required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-imagem" class="form-label">URL da Imagem Principal</label>
+              <input type="url" class="form-control" id="projeto-imagem" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-conteudo" class="form-label">Conteúdo</label>
+              <textarea class="form-control" id="projeto-conteudo" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-objetivos" class="form-label">Objetivos</label>
+              <textarea class="form-control" id="projeto-objetivos" rows="2"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-resultados" class="form-label">Resultados</label>
+              <textarea class="form-control" id="projeto-resultados" rows="2"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-local" class="form-label">Local</label>
+              <input type="text" class="form-control" id="projeto-local">
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-parceiros" class="form-label">Parceiros</label>
+              <input type="text" class="form-control" id="projeto-parceiros">
+            </div>
+
+            <div class="mb-3">
+              <label for="projeto-datas" class="form-label">Datas</label>
+              <input type="text" class="form-control" id="projeto-datas"
+                placeholder="Ex: Início: 01/01/2025 | Término: 31/12/2025">
+            </div>
+
+            <hr>
+            <h6 class="text-success mb-3">Fotos Relacionadas</h6>
+            <div id="fotos-container"></div>
+            <button type="button" class="btn btn-outline-success btn-sm" id="btnAddFoto">+ Adicionar Foto</button>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" id="btnSalvarProjeto">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer
+    class="bg-success text-white py-3 px-md-5 mt-auto d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="text-center text-md-start">
+      © Copyright 2025 - Todos os direitos reservados.
+    </div>
+    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+      <a href="https://facebook.com" target="_blank" rel="noopener" class="d-inline-block">
+        <img src="https://img.icons8.com/?size=24&id=1DNsmebniKOx&format=png&color=ffffff" alt="Facebook" width="24"
+          height="24">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="d-inline-block">
+        <img src="https://img.icons8.com/?size=24&id=85140&format=png&color=ffffff" alt="Instagram" width="24"
+          height="24">
+      </a>
+      <a href="https://x.com" target="_blank" rel="noopener" class="d-inline-block">
+        <img src="https://img.icons8.com/?size=24&id=Q33YQBzI2lZs&format=png&color=ffffff" alt="X" width="24"
+          height="24">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/projetos.js"></script>
+</body>
+
+</html>

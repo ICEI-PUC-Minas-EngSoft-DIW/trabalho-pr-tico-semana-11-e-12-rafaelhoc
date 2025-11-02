@@ -1,84 +1,4 @@
-// Estrutura JSON com os projetos da EcoVida
-const projeto = [
-  {
-    "id": 1,
-    "titulo": "Reflorestamento Local",
-    "descricao": "Plantar árvores nativas para recuperar áreas degradadas e aumentar a biodiversidade da região.",
-    "imagem": "https://www.branco.com.br/content/dam/Branco/Latin%20America/Portuguese-BR/Images/newsroom/Reflorestramento%20-%2003.jpg",
-    "conteudo": "O projeto de Reflorestamento Local tem como objetivo restaurar áreas degradadas por meio do plantio de espécies nativas.",
-    "objetivos": "Restaurar áreas degradadas, envolver a comunidade local e aumentar a biodiversidade.",
-    "resultados": "Mais de 500 árvores plantadas e 3 hectares recuperados.",
-    "local": "Belo Horizonte - MG",
-    "parceiros": "Escolas locais, ONGs ambientais e empresas patrocinadoras",
-    "datas": "Início: 01/01/2025 | Término: 31/12/2025",
-    "fotos": [
-      {
-        "titulo": "Mutirão de plantio com voluntários locais",
-        "url": "https://feac.org.br/wp-content/uploads/2018/04/PARA-SITE-1.jpg"
-      },
-      {
-        "titulo": "Mudas nativas cultivadas para reflorestamento",
-        "url": "https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/imagem/2024-10/viveiro_eng.beltrao_021.jpg"
-      },
-      {
-        "titulo": "Vista aérea de área reflorestada",
-        "url": "https://agenciapara.com.br/midias/2024/grandes/20103_a2a9dcc1-0027-379a-86d7-16a686ee90ff.jpg"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "titulo": "Educação Ambiental",
-    "descricao": "Oficinas e palestras em escolas para promover hábitos sustentáveis entre crianças e jovens.",
-    "imagem": "https://www.infoescola.com/wp-content/uploads/2019/09/educacao-ambiental-639310237.jpg",
-    "conteudo": "O projeto busca formar cidadãos conscientes por meio de palestras, oficinas e campanhas educativas em escolas públicas.",
-    "objetivos": "Promover hábitos sustentáveis e conscientização ambiental.",
-    "resultados": "Mais de 500 alunos impactados e 20 escolas atendidas.",
-    "local": "Belo Horizonte - MG",
-    "parceiros": "Secretaria de Educação, ONGs ambientais",
-    "datas": "Início: 01/02/2025 | Término: 31/10/2025",
-    "fotos": [
-      {
-        "titulo": "Palestra sobre sustentabilidade em escola pública",
-        "url": "https://conexaoeduca.saosebastiao.sp.gov.br/wp-content/uploads/2022/06/d9c240f3-1310-4243-ac76-01fbe7dbc98a-1024x682.jpg"
-      },
-      {
-        "titulo": "Distribuição de material de conscientização ambiental",
-        "url": "https://lucasdorioverde.mt.gov.br/arquivos/noticias/11435/g/pref_lrv.jpg"
-      },
-      {
-        "titulo": "Oficina de reciclagem para crianças",
-        "url": "https://www.santos.sp.gov.br/static/files_www/styles/newspagesimples/public/field/image/whatsapp_image_2019-07-05_at_17.31.40.jpeg?itok=SR-l0e9y"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "titulo": "Proteção da Fauna Silvestre",
-    "descricao": "Monitoramento e proteção de espécies nativas ameaçadas, com ações para preservar seus habitats naturais.",
-    "imagem": "https://correiopiauiense.com.br/media/image_bank/2025/3/thumbs/programa-de-protecao-a-fauna-silvestre-e-criado-no-piaui.jpg.1200x0_q95_crop.jpeg",
-    "conteudo": "O projeto realiza o monitoramento de espécies em risco e ações de preservação de habitats naturais.",
-    "objetivos": "Proteger espécies ameaçadas e preservar seus habitats.",
-    "resultados": "Espécies monitoradas: 15 | Áreas protegidas: 10 hectares",
-    "local": "Parques e reservas naturais da região",
-    "parceiros": "Institutos de Pesquisa, ONGs e voluntários",
-    "datas": "Início: 01/03/2025 | Término: 31/12/2025",
-    "fotos": [
-      {
-        "titulo": "Onça-pintada: símbolo da biodiversidade brasileira",
-        "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/onca_003.jpg"
-      },
-      {
-        "titulo": "Lobo-guará em área de preservação",
-        "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/lobo_guara_001.jpg"
-      },
-      {
-        "titulo": "Tamanduá-bandeira em seu habitat natural",
-        "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/tamandua_002.jpg"
-      }
-    ]
-  }
-];
+const API_URL = "http://localhost:3000/projetos";
 
 // Dados do carrossel institucional
 const carrossel = [
@@ -99,7 +19,9 @@ const carrossel = [
   }
 ];
 
-// Função para montar o carrossel dinamicamente
+// ==============================
+// 🟢 FUNÇÃO - Carregar carrossel
+// ==============================
 function carregarCarrossel() {
   const indicators = document.getElementById("carouselIndicators");
   const inner = document.getElementById("carouselInner");
@@ -133,23 +55,34 @@ function carregarCarrossel() {
   });
 }
 
-// Função para montar os cards de projetos
-function carregarProjetos() {
+// ====================================
+// 🟢 FUNÇÃO - Carregar projetos da API
+// ====================================
+async function carregarProjetos() {
   const container = document.getElementById("container-projetos");
-  projeto.forEach(p => {
-    container.innerHTML += `
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card w-100 shadow border-0">
-          <img src="${p.imagem}" class="card-img-top projeto-img" alt="${p.titulo}">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title text-success">${p.titulo}</h5>
-            <p class="card-text flex-grow-1">${p.descricao}</p>
-            <a href="detalhes.html?id=${p.id}" class="btn btn-success mt-2 align-self-start">Ver mais</a>
+  try {
+    const resposta = await fetch(API_URL);
+    const projetos = await resposta.json();
+
+    container.innerHTML = "";
+    projetos.forEach(p => {
+      container.innerHTML += `
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card w-100 shadow border-0">
+            <img src="${p.imagem}" class="card-img-top projeto-img" alt="${p.titulo}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-success">${p.titulo}</h5>
+              <p class="card-text flex-grow-1">${p.descricao}</p>
+              <a href="detalhes.html?id=${p.id}" class="btn btn-success mt-2 align-self-start">Ver mais</a>
+            </div>
           </div>
         </div>
-      </div>
-    `;
-  });
+      `;
+    });
+  } catch (erro) {
+    console.error("Erro ao carregar projetos:", erro);
+    container.innerHTML = `<p class="text-danger">Erro ao carregar os projetos.</p>`;
+  }
 }
 
 // Executa se estiver na home
@@ -158,56 +91,71 @@ if (document.body.id === "home") {
   carregarProjetos();
 }
 
-// Página de detalhes
-function carregarDetalhes() {
+// =========================================
+// 🟢 FUNÇÃO - Carregar detalhes de um projeto
+// =========================================
+async function carregarDetalhes() {
   const params = new URLSearchParams(window.location.search);
   const idProjeto = params.get("id");
-  const projetoSelecionado = projeto.find(p => p.id == idProjeto);
   const container = document.getElementById("detalhes-container");
 
-  if (projetoSelecionado && container) {
+  try {
+    const resposta = await fetch(`${API_URL}/${idProjeto}`);
+    const projeto = await resposta.json();
+
+    if (!projeto || !projeto.id) {
+      container.innerHTML = `<p class="text-danger">Projeto não encontrado.</p>`;
+      return;
+    }
+
     let fotosHTML = "";
 
-    if (projetoSelecionado.fotos && projetoSelecionado.fotos.length > 0) {
+    if (projeto.fotos && projeto.fotos.length > 0) {
       fotosHTML = `
         <h3 class="text-success mb-4">Fotos Relacionadas</h3>
         <div class="row g-4">
-          ${projetoSelecionado.fotos.map(foto => `
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="card border-0 shadow-sm h-100">
-                <img src="${foto.url}" class="card-img-top" alt="${foto.titulo}">
-                <div class="card-body">
-                  <h6 class="card-title text-secondary">${foto.titulo}</h6>
+          ${projeto.fotos
+            .map(
+              (foto) => `
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <img src="${foto.url}" class="card-img-top" alt="${foto.titulo}">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary">${foto.titulo}</h6>
+                  </div>
                 </div>
               </div>
-            </div>
-          `).join("")}
+            `
+            )
+            .join("")}
         </div>
       `;
     }
 
     container.innerHTML = `
-      <!-- Card de Informações Gerais -->
       <div class="card border-0 shadow mb-5">
-        <img src="${projetoSelecionado.imagem}" class="card-img-top" alt="${projetoSelecionado.titulo}">
+        <img src="${projeto.imagem}" class="card-img-top" alt="${projeto.titulo}">
         <div class="card-body">
-          <h2 class="text-success mb-3">${projetoSelecionado.titulo}</h2>
-          <p><strong>Descrição:</strong> ${projetoSelecionado.descricao}</p>
-          <p><strong>Conteúdo:</strong> ${projetoSelecionado.conteudo}</p>
-          <p><strong>Objetivos:</strong> ${projetoSelecionado.objetivos}</p>
-          <p><strong>Resultados:</strong> ${projetoSelecionado.resultados}</p>
-          <p><strong>Local:</strong> ${projetoSelecionado.local}</p>
-          <p><strong>Parceiros:</strong> ${projetoSelecionado.parceiros}</p>
-          <p><strong>Datas:</strong> ${projetoSelecionado.datas}</p>
+          <h2 class="text-success mb-3">${projeto.titulo}</h2>
+          <p><strong>Descrição:</strong> ${projeto.descricao}</p>
+          <p><strong>Conteúdo:</strong> ${projeto.conteudo}</p>
+          <p><strong>Objetivos:</strong> ${projeto.objetivos}</p>
+          <p><strong>Resultados:</strong> ${projeto.resultados}</p>
+          <p><strong>Local:</strong> ${projeto.local}</p>
+          <p><strong>Parceiros:</strong> ${projeto.parceiros}</p>
+          <p><strong>Datas:</strong> ${projeto.datas}</p>
         </div>
       </div>
 
-      <!-- Seção de Fotos Relacionadas -->
       ${fotosHTML}
     `;
-  } else if (container) {
-    container.innerHTML = `<p class="text-danger">Projeto não encontrado.</p>`;
+  } catch (erro) {
+    console.error("Erro ao carregar detalhes:", erro);
+    container.innerHTML = `<p class="text-danger">Erro ao carregar o projeto.</p>`;
   }
 }
 
-if (document.body.id === "detalhes") carregarDetalhes();
+// Executa se estiver na página de detalhes
+if (document.body.id === "detalhes") {
+  carregarDetalhes();
+}

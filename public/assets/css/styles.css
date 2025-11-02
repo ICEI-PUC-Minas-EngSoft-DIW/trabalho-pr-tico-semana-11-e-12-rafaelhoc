@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -16,6 +17,12 @@ html {
 body {
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* Cabeçalho */
@@ -34,9 +41,9 @@ body {
 }
 
 .carousel-item img {
-  height: 100vh;
-  object-fit: cover;
-  padding-top: 76px;
+    height: 100vh;
+    object-fit: cover;
+    padding-top: 76px;
 }
 
 section {
@@ -50,16 +57,18 @@ section h2 {
 /* Seção Sobre */
 
 #sobre p {
-  text-align: justify;
+    text-align: justify;
 }
 
 /* Seções Equipe e Projetos */
 
-#equipe .card, #projetos .card {
+#equipe .card,
+#projetos .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#equipe .card:hover, #projetos .card:hover {
+#equipe .card:hover,
+#projetos .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
@@ -86,4 +95,11 @@ textarea {
 
 footer .social a:hover {
     opacity: 0.7;
+}
+
+/* Modal */
+
+.modal-body-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
 }
