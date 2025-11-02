@@ -6,10 +6,10 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Rafael Henrique de Oliveira Cruz
+- Matricula: 904213
+- Proposta de projeto escolhida: Organizações e Equipes
+- Breve descrição sobre seu projeto: Desenvolvimento de um site para uma ONG de proteção ambiental, com o objetivo de divulgar suas ações e projetos, apresentar a equipe responsável e facilitar a comunicação com apoiadores e voluntários.
 
 **Print dos testes da API com Postman ou similar**
 
