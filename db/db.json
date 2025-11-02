@@ -1,18 +1,92 @@
 {
-  "usuarios": [
+  "projetos": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": 1,
+      "titulo": "Reflorestamento Local",
+      "descricao": "Plantar árvores nativas para recuperar áreas degradadas e aumentar a biodiversidade da região.",
+      "imagem": "https://www.branco.com.br/content/dam/Branco/Latin%20America/Portuguese-BR/Images/newsroom/Reflorestramento%20-%2003.jpg",
+      "conteudo": "O projeto de Reflorestamento Local tem como objetivo restaurar áreas degradadas por meio do plantio de espécies nativas.",
+      "objetivos": "Restaurar áreas degradadas, envolver a comunidade local e aumentar a biodiversidade.",
+      "resultados": "Mais de 500 árvores plantadas e 3 hectares recuperados.",
+      "local": "Belo Horizonte - MG",
+      "parceiros": "Escolas locais, ONGs ambientais e empresas patrocinadoras",
+      "datas": "Início: 01/01/2025 | Término: 31/12/2025",
+      "fotos": [
+        {
+          "titulo": "Mutirão de plantio com voluntários locais",
+          "url": "https://feac.org.br/wp-content/uploads/2018/04/PARA-SITE-1.jpg"
+        },
+        {
+          "titulo": "Mudas nativas cultivadas para reflorestamento",
+          "url": "https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/imagem/2024-10/viveiro_eng.beltrao_021.jpg"
+        },
+        {
+          "titulo": "Vista aérea de área reflorestada",
+          "url": "https://agenciapara.com.br/midias/2024/grandes/20103_a2a9dcc1-0027-379a-86d7-16a686ee90ff.jpg"
+        }
+      ]
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "titulo": "Educação Ambiental Atualizada",
+      "descricao": "Oficinas, palestras e eventos comunitários para fortalecer a conscientização ambiental.",
+      "imagem": "https://www.infoescola.com/wp-content/uploads/2019/09/educacao-ambiental-639310237.jpg",
+      "conteudo": "O projeto busca engajar comunidades por meio de atividades participativas.",
+      "objetivos": "Promover hábitos sustentáveis, reduzir desperdício e estimular o consumo consciente.",
+      "resultados": "Mais de 800 alunos impactados e 30 escolas atendidas.",
+      "local": "Belo Horizonte - MG",
+      "parceiros": "Secretaria de Educação, ONGs ambientais, empresas locais",
+      "datas": "Início: 01/02/2025 | Término: 31/12/2025",
+      "fotos": [
+        {
+          "titulo": "Oficina de reciclagem com alunos",
+          "url": "https://img.freepik.com/fotos-premium/oficina-de-reciclagem-escolar.jpg"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "id": 3,
+      "titulo": "Proteção da Fauna Silvestre",
+      "descricao": "Monitoramento e proteção de espécies nativas ameaçadas, com ações para preservar seus habitats naturais.",
+      "imagem": "https://correiopiauiense.com.br/media/image_bank/2025/3/thumbs/programa-de-protecao-a-fauna-silvestre-e-criado-no-piaui.jpg.1200x0_q95_crop.jpeg",
+      "conteudo": "O projeto realiza o monitoramento de espécies em risco e ações de preservação de habitats naturais.",
+      "objetivos": "Proteger espécies ameaçadas e preservar seus habitats.",
+      "resultados": "Espécies monitoradas: 15 | Áreas protegidas: 10 hectares",
+      "local": "Parques e reservas naturais da região",
+      "parceiros": "Institutos de Pesquisa, ONGs e voluntários",
+      "datas": "Início: 01/03/2025 | Término: 31/12/2025",
+      "fotos": [
+        {
+          "titulo": "Onça-pintada: símbolo da biodiversidade brasileira",
+          "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/onca_003.jpg"
+        },
+        {
+          "titulo": "Lobo-guará em área de preservação",
+          "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/lobo_guara_001.jpg"
+        },
+        {
+          "titulo": "Tamanduá-bandeira em seu habitat natural",
+          "url": "https://www.sedest.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2025-09/tamandua_002.jpg"
+        }
+      ]
+    },
+    {
+      "titulo": "Gestão de Resíduos Urbanos",
+      "descricao": "Projeto voltado à redução do lixo e incentivo à coleta seletiva nos bairros da cidade.",
+      "imagem": "https://s3.amazonaws.com/mongabay-images/22/05/03061402/c1f7999f-urbana.jpg",
+      "conteudo": "Campanhas e parcerias com escolas e associações de moradores para conscientização ambiental.",
+      "objetivos": "Reduzir a produção de lixo doméstico e aumentar a taxa de reciclagem.",
+      "resultados": "Coleta seletiva implementada em 10 bairros e 200 famílias participantes.",
+      "local": "Caeté - MG",
+      "parceiros": "Prefeitura Municipal, cooperativas de reciclagem e ONGs locais",
+      "datas": "Início: 01/04/2025 | Término: 30/09/2025",
+      "fotos": [
+        {
+          "titulo": "Campanha de conscientização",
+          "url": "https://blog.reciclafacil.com.br/wp-content/uploads/2021/02/reciclagem-urbana.jpg"
+        }
+      ],
+      "id": 5
     }
   ]
 }
