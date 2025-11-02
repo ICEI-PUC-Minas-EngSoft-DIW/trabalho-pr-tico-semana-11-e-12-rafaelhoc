@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho */
+
+.navbar-nav .nav-link:hover {
+    color: #198754;
+}
+
+.banner {
+    height: 100vh;
+    padding-top: 76px;
+    background-image: url('https://horacampinas.com.br/wp-content/uploads/2023/03/1d5626d9-d063-4ba1-b21f-db2619d3e31d-1140x570.jpg');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+  padding-top: 76px;
+}
+
+section {
+    min-height: calc(100vh - 70px);
+}
+
+section h2 {
+    padding-bottom: 50px;
+}
+
+/* Seção Sobre */
+
+#sobre p {
+  text-align: justify;
+}
+
+/* Seções Equipe e Projetos */
+
+#equipe .card, #projetos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#equipe .card:hover, #projetos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    border: 3px solid #2e8b57;
+    object-fit: cover;
+}
+
+.projeto-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Seção Contato */
+
+textarea {
+    resize: none;
+}
+
+/* Rodapé */
+
+footer .social a:hover {
+    opacity: 0.7;
+}
